@@ -4,16 +4,19 @@ public class Main {
 
         HighPriority highPriority = new HighPriority();
         Thread thread = new Thread(highPriority);
+        thread.setName("high priority");
         thread.setPriority(Thread.MAX_PRIORITY);
         thread.start();
 
         LowPriority lowPriority = new LowPriority();
         Thread lThread = new Thread(lowPriority);
+        lThread.setName("min-priority");
         lThread.setPriority(Thread.MIN_PRIORITY);
         lThread.start();
 
         NormPriority normPriority = new NormPriority();
         Thread nThread = new Thread(normPriority);
+        nThread.setName("norm priority");
         nThread.setPriority(Thread.NORM_PRIORITY);
         nThread.start();
 

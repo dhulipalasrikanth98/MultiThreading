@@ -8,13 +8,10 @@ public class Main {
         JoinThread joinThread = new JoinThread();
         Thread thread = new Thread(joinThread);
         thread.start();
+        Thread.currentThread().setName("main");
         for(int i = 0; i < 10; i++){
             System.out.println(Thread.currentThread().getName() + " "+i);
         }
-        joinThread.run();
-
-
-
 
     }
 }

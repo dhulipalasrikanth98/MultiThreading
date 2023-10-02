@@ -9,9 +9,5 @@ public class Main {
         Thread t = new Thread(m);
         t.start();
         thread.start();
-
-
-
-
     }
 }
